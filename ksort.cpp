@@ -30,16 +30,8 @@ void KSort::sort(int bottom, int up)
 			--k_up;
 		while(Array[k_bottom] <= tmp && k_bottom < k_up)
 			++k_bottom;
-		//if(k_bottom < k_up)
-			 swap(Array[k_up], Array[k_bottom]);
+		 swap(Array[k_up], Array[k_bottom]);
 	}
-	/*
-	if(tmp > Array[k_up])
-	{
-		Array[bottom] = Array[k_up];
-		Array[k_up] = tmp;
-	}
-	*/
 	Array[bottom] = Array[k_up];
 	Array[k_up] = tmp;
 	sort(bottom, k_up - 1);
